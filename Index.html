@@ -10,7 +10,7 @@
 <body>
 
     <header>
-
+        <!--logon lisäys-->
         <div class="logo">
             <a href="Index.html">
             <img src="logo.png" alt="Logo">
@@ -18,7 +18,7 @@
         </div>
 
         <nav>
-
+        <!--navigaatiolinkit-->
             <a href="Index.html">Home</a>
             <a href="Products.html">Products</a>
             <a href="Story.html">Story</a>
@@ -27,11 +27,10 @@
     </nav>
     </header>
 
-    <div style="clear: right;"></div>
-    <div style="clear: left;"></div>
-
     <Main>
+        <!--varsinainen aloitus, huom. kuva wrappaa tekstin kanssa-->
         <h1>Web hosting with a big heart</h1>
+
         <p>
         <img src="Toimisto.png" alt="Toimisto" style="float: right; margin: 0 0 1em 1em;">
         Reliable hosting built for performance, security, and peace of mind.
@@ -47,41 +46,62 @@
         management tools, transparent pricing, and knowledgeable support available when you need it, 
         we provide a dependable foundation you can build on with confidence.
         </p>
+
+        <!--clearaa floatin, eli tästä eteenpäin ei yritä kiertää kuvaa-->
+        <div style="clear: right;"></div>
+        <div style="clear: left;"></div>
+        <br>
+
         <section>
+
             <div>
                 <h2>Everything you need for hosting</h2>
                 <p>Powerful and useful features to help you succeed to build and display your presence online.</p>
             </div>
+
+            <!--ominaisuuskortit, fgrid on taulukon säännöt ja fcard on kortit-->
             <div class="fgrid">
+
                 <div class="fcard">
                     <h3>Reliable Speed</h3>
                     <p>Fast SSD storag and reliable servers ensure your site loads in a blink of an eye.</p>
                 </div>
+
                 <div class="fcard">
                     <h3>Advanced Security</h3>
                     <p>Enterprise-grade SSL certificates, DDoS protection, and daily backups included.</p>
                 </div>
+
                 <div class="fcard">
                     <h3>99.9% Uptime</h3>
                     <p>Industry-leading uptime guarantee with redundant infrastructure.</p>
                 </div>
+
                 <div class="fcard">
                     <h3>24/7 Support</h3>
                     <p>Expert support team available round the clock to assist you.</p>
                 </div>
+
                 <div class="fcard">
                     <h3>Unlimited Bandwidth</h3>
                     <p>No traffic limits. Handle millions of visitors without worrying about overages.</p>
                 </div>
+
                 <div class="fcard">
                     <h3>Partner You Can Trust</h3>
                     <p>We have but one goal: Customer satisfaction. All our services and solutions are customer first.</p>
                 </div>
+
             </div>
+
         </section>
+
         <div style="clear: right;"></div>
-        <h2 class="news"> Recent news</h2>
-        <article>
+
+        <h2 class="centering"> Recent news</h2>
+
+        <!--uutiset, class left määrittää että antaa tilaa oikealle-->
+        <article class="news">
             <p class="left"> <b>19.1.2026 Great news everybody: <br><br></b>
             <b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -102,30 +122,34 @@
         culpa qui officia deserunt mollit anim id est laborum."
         </p>
     </Main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <h4>Follow us</h4>
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-      </ul>
+<footer>
+    <div class="footerlinks">
+        <div>
+            <h4>Follow us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>More about us</h4>
+            <ul>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+
     </div>
 
-    <div class="footer-center">
-        <h4>More about us</h4>
-        <ul>
-            <li><a href="#">Our Services</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">About us</a></li>
-        </ul>
-    </div>
+        <div class="footerinfo">
+            <p>Novatech Solutions 2026 – Designed By: Ryhmä 14</p>
+        </div>
 
-  </div class="group">
-    <div>
-      <p>Novatech Solutions 2026 – Designed By: Ryhmä 14</p>
-    </div>
 </footer>
+
 </body>
+
 </html> 

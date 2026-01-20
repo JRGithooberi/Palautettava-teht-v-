@@ -1,9 +1,9 @@
+/* poistaa listojen merkkipallurat kaikkialta */
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
+/* headerin logo ja linkkien toiminta*/
 header {
     margin-top: 20px;
     display: flex;
@@ -20,6 +20,11 @@ header {
     float: left;
 }
 
+nav {
+    margin-left: 20px;
+}
+
+/* linkkien säädökset väreistä ja alleviivauksista kaikkialle */
 a {
     color: black;
     text-decoration: none;
@@ -33,17 +38,12 @@ a:hover {
     color:darkblue
 }
 
-nav {
-    margin-left: 20px;
-}
+/* Tämä on vain article news osion otsikolle */
 
+/* alunperin tehty että etusivun kuva toimii kivasti pienillä ruuduilla */
 main img {
     border-radius: 10px;
     max-width: 100%;
-}
-
-.news {
-    text-align: center;
 }
 
 section h2{
@@ -55,6 +55,8 @@ section p {
     text-align: center;
 }
 
+/*  tein alunperin ohjeiden mukaan tämän taulukon niin että siinä oli 2x3 ruutua, mutta ei ollu kiva.
+    tekoäly antoi tällaisen ihan jeesus vastauksen että ne taittuu kivasti mihinkä tahansa kokoon */
 .fgrid {
     max-width: calc(3 * 320px + 2 * 24px);
     margin: 0 auto;
@@ -63,6 +65,7 @@ section p {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
+/* tässä on kunkin kortin tiedot, lähinnä väri ja reunat */
 .fcard {
     background: #D9F3FF ;
     border: 1px solid: #DDDADA;
@@ -74,6 +77,7 @@ section p {
     text-align: left;
 }
 
+/* korteille hover toiminto. Siirtyy vähän ylös ja antaa varjon */
 .fcard:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
@@ -83,7 +87,13 @@ h1 {
     font-size: 2.5em;
 }
 
-article {
+.centering {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* tämä on uutisosion modaukset */
+.news {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -95,7 +105,7 @@ article {
     margin: auto;
 }
 
-article p {
+.news p {
     text-align: left;
     background-color: #FFC082;
     border: 2px solid #99e6ff;
@@ -103,69 +113,39 @@ article p {
     padding: 10px;
 }
 
-p {
-    text-align: left;
-}
-
+/* uutisissa antaa vasemmanpuoleisille tilaa oikealle*/
 .left {
     margin-right: 20px;
 }
 
+/* footerin linkit vierekkäin ja infot alle */
 footer {
-    border-top: 5px solid #99e6ff;
+    border-top: 3px solid #99e6ff;
     padding: 40px 20px;
     font-family: system-ui, sans-serif;
-}
-
-.footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-}
-
-.footer-left,
-.footer-center,
-.footer-group {
-    flex: 1;
-}
-
-.footer-left {
-    text-align: left;
-}
-
-.footer-center {
     text-align: center;
 }
-
-.footer-group {
-    text-align: right;
-    colo
-    r: #6b7280;
+.footerlinks {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 20px;
+    align-items: flex-start;
 }
-.site-footer h4 {
-    margin-bottom: 12px;
-    font-size: 16px;
-}
-
-.site-footer ul {
-    list-style: none;
+.footerlinks ul {
     padding: 0;
     margin: 0;
 }
 
-.site-footer li {
-    margin-bottom: 6px;
+.footerinfo {
+    font-size: 14px;
+    color: #555;
+}
+footer h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-.site-footer a {
-    text-decoration: none;
-    color: #374151;
-}
-
-.site-footer a:hover {
-    color: #2563eb;
-}
 
 @media (max-width: 800px) {
 
