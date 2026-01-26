@@ -73,7 +73,7 @@ h1 {
     font-size: 3rem;
     font-weight: 700;
     line-height: 1.2;
-    text-transform: uppercase; /* optional: adds impact */
+    text-transform: uppercase;
     margin-bottom: 40px;
 }
 
@@ -92,8 +92,8 @@ h1 {
 /* tässä on kunkin kortin tiedot, lähinnä väri ja reunat */
 .fcard {
     margin-top: 30px;
-    background: #D9F3FF ;
-    border: 1px solid: #DDDADA;
+    background: #D9F3FF;
+    border: 1px solid #DDDADA;
     border-radius: 15px;
     padding: 20px;
 }
@@ -124,13 +124,12 @@ h1 {
 .news {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     padding: 10px;
     font-size: 1.1em;
     text-align: center; 
     font-family: Arial, Helvetica, sans-serif; 
-    width: 80%;
-    margin: auto;
+    width: 60%;
+    margin:auto;
 }
 
 .news p {
@@ -139,11 +138,93 @@ h1 {
     border: 2px solid #99e6ff;
     border-radius: 10px;
     padding: 10px;
+    max-width: 40%;
 }
 
 /* uutisissa antaa vasemmanpuoleisille tilaa oikealle*/
 .left {
     margin-right: 20px;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+    font-size: 1.1em;
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif; 
+    width: 60%;
+    margin: auto;
+}
+
+.product p {
+    text-align: left;
+    background-color: #FFC082;
+    border: 2px solid #99e6ff;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 30%;
+}
+
+.producth2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.producth2r{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.producttext {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.l {
+  margin-right: 10px;
+}
+
+.checked {
+  color: #1aa3ff;
+}
+
+.checkedl {
+  color: #1aa3ff;
+  margin-right: 10px;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 24px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.info {
+  color: dodgerblue;
+}
+
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
+
+.infoo {
+  color: #b36b00;
+}
+
+.infoo:hover {
+  background: #b36b00;
+  color: white;
 }
 
 /* footerin linkit vierekkäin ja infot alle */
@@ -175,16 +256,6 @@ footer h4 {
     font-size: 16px;
 }
 
-
-@media (max-width: 800px) {
-
-    article {
-    flex-direction: column;
-    }
-    footer ul li {
-    flex-direction: column;
-}
-}
 @media screen and (max-width: 768px){
   /* (A) BREAK INTO VERTICAL MENU */
 
@@ -220,4 +291,35 @@ header label {
   /* (C) TOGGLE SHOW/HIDE MENU */
 nav div a { display: none; }
 header input:checked ~ nav div a { display: block; }
+
+    .news {
+    flex-direction: column;
+    }
+
+    footer ul li {
+    flex-direction: column;
+    }
+
+    .product {
+    flex-direction: column;
+    width: 80%;
+    }
+
+    .product p {
+    max-width: 90%;
+    }
+
+    h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    }
+
+    .narrowing{
+    margin-right: 10%;
+    margin-left: 10%
+    }
 }
