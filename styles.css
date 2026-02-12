@@ -210,28 +210,23 @@ h1 {
 
 /* tämä on uutisosion modaukset */
 .news {
-    display: flex;
-    flex-direction: row;
+
     padding: 10px;
     font-size: 1.1em;
     text-align: center; 
     font-family: Arial, Helvetica, sans-serif; 
     width: 60%;
     margin:auto;
-}
-
-.news p {
-    text-align: left;
-    background-color: #FFC082;
-    border: 2px solid #99e6ff;
+    background-color:#b36b00;
     border-radius: 10px;
-    padding: 10px;
-    max-width: 40%;
 }
 
 /* uutisissa antaa vasemmanpuoleisille tilaa oikealle*/
-.left {
+.news a {
     margin-right: 20px;
+}
+.news a::first-line {
+    font-weight: bold;
 }
 
 .product {

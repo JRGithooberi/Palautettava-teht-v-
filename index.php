@@ -9,6 +9,9 @@
 
 <body>
 
+    <?php include('asetukset.php');?>
+
+
     <header>
         <!--logon lisäys-->
         <div class="logo">
@@ -108,14 +111,30 @@
 
         <!--uutiset, class left määrittää että antaa tilaa oikealle-->
         
+        <?php
+        $sql = "SELECT * FROM uutiset LIMIT 3";
+        #echo $sql;
+
+        // Valmistellaan SQL-lause ja lähetetään palvelimelle odottamaan käyttöä
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->execute();
+
+        // Haetaan kaikki rivit
+        $rivit = $stmt -> fetchAll();
+        echo '<article class="news">';
+
+            foreach($rivit as $rivi) {
+                $linkki = 'uutinen.php?id=' . $rivi['id'];
+                echo '<a href="' . $linkki . '">'  . $rivi['otsikko'];
+                echo '<p>' . $rivi['pvm'] . '</p>';
+                echo '<p>' . $rivi['teksti'] . '</p></a>';
+            } 
+
+            echo '</article>';
+        ?>
+
         <article class="news">
-
-            <p class="left"> <b>19.1.2026 Great news everybody: <br><br></b>
-            <b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat. </p>
-
             <p><b>1.1.2026 Updating our policy<br><br></b>
             <b>Duis</b> aute irure dolor in reprehenderit in voluptate velit esse 
             cillum dolore eu fugiat nulla  pariatur. Excepteur sint occaecat 
