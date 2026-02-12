@@ -30,46 +30,28 @@
         </nav>
 
     </header>
- <!--yläpalkin loppu-->
-
- <main class="contact-layout">
-
-    <h1>Contact NovaTech solutions</h1>
-        
-    <div class="contact-sisältö">
-        <section class="yhteystiedot">
-            <form action="#" method="post">
-                <div class="field">
-                    <label>Full Name</label>
-                    <input type="text">
-                </div>
-
-                <div class ="field">
-                    <label>Email Address</label>
-                    <input type="email">
-                </div>
-
-                <div class="field">
-                    <label>Message</label>
-                    <textarea></textarea>
-                </div>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-        <section class="contact-kuva">
-            <img src="https://img.freepik.com/free-photo/office-desktop-with-laptop-business-man_23-2148174084.jpg" alt="contact us">
-        </section>
-    
-    </div>
 
 
+<?php include('asetukset.php');?>
 
- </main>
+<?php
+    $sql = "SELECT * FROM tiedot
+            WHERE id = ?";
+    #echo $sql;
+
+    // Valmistellaan SQL-lause ja lähetetään palvelimelle odottamaan käyttöä
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+
+    // Haetaan kaikki rivit
+    $rivit = $stmt -> fetchAll();
+
+    $uutinen = htmlspecialchars($_GET['id']);
+
+?>
 
 
-<!--alapalkin alku-->
     <footer>
         <div class="footerlinks">
             <div>
@@ -98,3 +80,5 @@
 
     </footer>
 </body>
+
+</html> 

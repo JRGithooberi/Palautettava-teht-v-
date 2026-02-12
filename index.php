@@ -15,7 +15,7 @@
     <header>
         <!--logon lisäys-->
         <div class="logo">
-            <a href="Index.html">
+            <a href="index.php">
             <img src="logo.png" alt="Logo">
             </a>
         </div>
@@ -25,7 +25,7 @@
         <nav>
         <!--navigaatiolinkit-->
             <div>
-                <a href="Index.html">Home</a>
+                <a href="index.php">Home</a>
                 <a href="Products.html">Products</a>
                 <a href="Story.html">Story</a>
                 <a href="Contact.html">Contact</a>
@@ -127,7 +127,7 @@
             foreach($rivit as $rivi) {
                 $linkki = 'uutinen.php?id=' . $rivi['id'];
                 echo '<a href="' . $linkki . '">'  . $rivi['otsikko'];
-                echo '<p>' . $rivi['pvm'] . '</p>';
+                echo '<p>' . $rivi['pvm'] . '</p><br>';
                 echo '<p>' . $rivi['teksti'] . '</p></a>';
             } 
 
